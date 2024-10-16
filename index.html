@@ -7,49 +7,12 @@
     <title>Modern Responsive Website</title>
 
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
-		.navbar-1{
-            background-color: #f8f9fa;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .info-div-1 {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-            align-items: center;
-			margin-right: 120px;
-        }
-        .info-item-1 {
-            margin-right: 20px;
-            font-size: 14px;
-			text-decoration: none; /* Remove underline */
-			color: inherit; /* Maintain the link's default color */
-
-        }
-		.info-item-1:hover {
-			color: #046cb5;
-		}
-        .social-div-1 {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-			width: 10%;
-        }
-		
-		.social-div-2 {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-			width: 30%;
         }
         .social-icon-1 {
             margin-left: 15px;
@@ -64,6 +27,7 @@
 		}
 		.social-icon-1 {
 			transition: color 0.3s ease;
+			color: #fff;
 		}
 		body .social-icon-1.facebook-icon:hover i {
 			color: #1877F2 !important; /* Facebook blue */
@@ -76,67 +40,6 @@
 		body .social-icon-1.twitter-icon:hover i {
 			color: #1DA1F2 !important; /* Twitter blue */
 		}
-		.navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            background-color: white;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-        .logo img {
-            height: 50px;
-            width: 50px;
-            margin-right: 10px;
-            object-fit: contain;
-        }
-        .logo-text {
-            font-size: 14px;
-            color: #333;
-            text-align: center;
-            line-height: 1.2;
-        }
-        .nav-links {
-            display: flex;
-            gap: 20px;
-			margin-right: 120px;
-        }
-        .nav-links a {
-            text-decoration: none;
-            color: #333;
-            font-size: 16px;
-            padding: 5px 0;
-            position: relative;
-        }
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: #ffc107;
-            transform: scaleX(0);
-            transform-origin: bottom right;
-        }
-        .nav-links a:hover {
-            color: #0dcaf0;
-        }
-        .nav-links a:hover::after {
-            transform: scaleX(1);
-            transform-origin: bottom left;
-        }
-        .nav-links a.active {
-            border-bottom: 2px solid #ffc107;
-            font-weight: bold;
-        }
-        .nav-links a.active:hover::after {
-            transform: scaleX(0);
-        }
 		
         body {
             font-family: Arial, sans-serif;
@@ -164,7 +67,7 @@
 
         .hero-slider {
             position: relative;
-            height: 60vh;
+            height: 100vh;
             overflow: hidden;
         }
 
@@ -466,148 +369,201 @@
     </style>
 </head>
 <body>
-			<!-- Header-top start -->
-    <nav class="navbar-1">
-        <div class="info-div-1">
-            <span class="info-item-1"><i class="fas fa-clock"></i> Mon - Fri 8:00am - 4:00pm / Sunday 8:00am - 2:00pm</span>
-            <a href="tel:+18684500982" class="info-item-1"><i class="fa-solid fa-phone"></i> +1 (868)450-0982</a>
-			<a href="mailto:testtickets@gmail.com" class="info-item-1"><i class="fa-solid fa-envelope"></i> testtickets@gmail.com</a>
-        </div>
-			<div class="social-div-1">
-				<a href="https://www.facebook.com" class="social-icon-1" target="_blank"  
-				onmouseover="this.querySelector('i').style.color='#1877F2'" 
-				onmouseout="this.querySelector('i').style.color='#333'">
-				<i class="fab fa-facebook-f"></i>
-				</a>
-				
-				<a href="https://www.instagram.com" class="social-icon-1" target="_blank" 
-				onmouseover="this.querySelector('i').style.color='#E4405F'" 
-				onmouseout="this.querySelector('i').style.color='#333'">
-				<i class="fab fa-instagram"></i>
-				</a>
-				
-				<a href="https://www.twitter.com" class="social-icon-1" target="_blank"  
-				onmouseover="this.querySelector('i').style.color='#1DA1F2'" 
-				onmouseout="this.querySelector('i').style.color='#333'">
-				<i class="fab fa-twitter"></i>
-				</a>
-		   </div>
-    </nav>
-            <!-- Header-top end -->
- 
-    <nav class="navbar">
-        <div class="logo">
-            <img src="https://i.imgur.com/sL8Mo5j.png" alt="Nurses International Logo">
-            <div class="logo-text">
-            </div>
-        </div>
-        <div class="nav-links">
-            <a href="index.html" class="active">Home</a>
-            <a href="#">About Us</a>
-            <a href="#">Our Services</a>
-            <a href="#">Education</a>
-            <a href="sign-in.html">Membership</a>
-            <a href="contact.html">Contact Us</a>
-        </div>
-    </nav>
-    <main>
-        <div class="hero-slider">
-            <div class="slide active" style="background-image: url('https://i.imgur.com/sL8Mo5j.png'); background-size: contain; background-position: right; background-repeat: no-repeat; background-color: #f4a261;">
-                <div class="slide-content">
-                    <h2>Welcome to Our Website</h2>
-                    <p class="slide-text-1">Experience the future of web design</p>
-                    <p class="slide-text-2">Discover our amazing features</p>
-                </div>
-            </div>
-            <div class="slide" style="background-color: #2a9d8f;">
-                <div class="slide-content">
-                    <h2>Discover Amazing Services</h2>
-                    <p class="slide-text-1">Unlock your potential with us</p>
-                    <p class="slide-text-2">Innovative solutions for your needs</p>
-                </div>
-            </div>
-            <div class="slide" style="background-color: #e76f51;">
-                <div class="slide-content">
-                    <h2>Join Our Community</h2>
-                    <p class="slide-text-1">Connect with like-minded individuals</p>
-                    <p class="slide-text-2">Be part of something extraordinary</p>
-                </div>
-            </div>
-				<div class="slider-arrow slider-arrow-left"><i class="fas fa-chevron-left"></i></div>
-				<div class="slider-arrow slider-arrow-right"><i class="fas fa-chevron-right"></i></div>
-        </div>
 
-        <section class="content-section">
+<!-- Header-top start -->
+<nav class="bg-gray-800 text-white py-2">
+    <div class="container mx-auto flex justify-between items-center">
+        <div class="flex items-center space-x-4">
+            <span class="text-sm"><i class="fas fa-clock"></i> Mon - Fri 8:00am - 4:00pm / Sunday 8:00am - 2:00pm</span>
+            <a href="tel:+18684500982" class="text-sm"><i class="fa-solid fa-phone"></i> +1 (868)450-0982</a>
+            <a href="mailto:testtickets@gmail.com" class="text-sm"><i class="fa-solid fa-envelope"></i> testtickets@gmail.com</a>
+        </div>
+        <div class="flex space-x-4">
+            <a href="https://www.facebook.com" class="social-icon-1 text-gray-400 hover:text-blue-500" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com" class="social-icon-1 text-gray-400 hover:text-pink-500" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.twitter.com" class="social-icon-1 text-gray-400 hover:text-blue-400" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </div>
+    </div>
+</nav>
+<!-- Header-top end -->
+<nav class="bg-gray-800">
+  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+    <div class="relative flex h-16 items-center justify-between">
+      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+          <span class="absolute -inset-0.5"></span>
+          <span class="sr-only">Open main menu</span>
+          <!--
+            Icon when menu is closed.
+
+            Menu open: "hidden", Menu closed: "block"
+          -->
+          <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+          <!--
+            Icon when menu is open.
+
+            Menu open: "block", Menu closed: "hidden"
+          -->
+          <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+        <div class="flex flex-shrink-0 items-center">
+          <img class="h-8 w-auto" src="https://i.imgur.com/sL8Mo5j.png" alt="Your Company">
+        </div>
+        <div class="hidden sm:ml-6 sm:block">
+          <div class="flex space-x-4">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+            <a href="#" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page">Home</a>
+            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About Us</a>
+            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Our Services</a>
+            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Education</a>
+            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Membership</a>
+            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact Us</a>			
+          </div>
+        </div>
+      </div>
+      <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+        <button type="button" class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+          <span class="absolute -inset-1.5"></span>
+          <span class="sr-only">View notifications</span>
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+          </svg>
+        </button>
+
+
+        </div>
+      </div>
+    </div>
+  
+
+  <!-- Mobile menu, show/hide based on menu state. -->
+  <div class="sm:hidden" id="mobile-menu">
+    <div class="space-y-1 px-2 pb-3 pt-2">
+      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+      <a href="#" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Home</a>
+      <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About Us</a>
+      <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Our Services</a>
+      <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Education</a>
+	  <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Membership</a>
+	  <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact Us</a>
+    </div>
+  </div>
+</nav>
+<main>
+    <div class="hero-slider">
+        <div class="slide active" style="background-image: url('https://i.imgur.com/sL8Mo5j.png'); background-size: contain; background-position: right; background-repeat: no-repeat; background-color: #f4a261;">
+            <div class="slide-content">
+                <h2 class="text-2xl font-bold">Welcome to Our Website</h2>
+                <p class="slide-text-1 text-gray-700">Experience the future of web design</p>
+                <p class="slide-text-2 text-gray-700">Discover our amazing features</p>
+            </div>
+        </div>
+        <div class="slide" style="background-color: #2a9d8f;">
+            <div class="slide-content">
+                <h2 class="text-2xl font-bold">Discover Amazing Services</h2>
+                <p class="slide-text-1 text-gray-700">Unlock your potential with us</p>
+                <p class="slide-text-2 text-gray-700">Innovative solutions for your needs</p>
+            </div>
+        </div>
+        <div class="slide" style="background-color: #e76f51;">
+            <div class="slide-content">
+                <h2 class="text-2xl font-bold">Join Our Community</h2>
+                <p class="slide-text-1 text-gray-700">Connect with like-minded individuals</p>
+                <p class="slide-text-2 text-gray-700">Be part of something extraordinary</p>
+            </div>
+        </div>
+        <div class="slider-arrow slider-arrow-left"><i class="fas fa-chevron-left"></i></div>
+        <div class="slider-arrow slider-arrow-right"><i class="fas fa-chevron-right"></i></div>
+    </div>
+
+    <section class="content-section py-16">
+        <div class="container mx-auto flex justify-between items-center">
             <div class="image-half">
-                <img src="https://via.placeholder.com/600x400" alt="Placeholder image">
+                <img src="https://via.placeholder.com/600x400" alt="Placeholder image" class="w-full h-auto">
             </div>
             <div class="text-half">
-                <h2>About Our Company</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <button>Learn More</button>
+                <h2 class="text-2xl font-bold mb-4">About Our Company</h2>
+                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p class="mb-6">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">Learn More</button>
             </div>
-        </section>
-      <section class="services-section">
-            <h2>What We Offer</h2>
-            <div class="services-row">
+        </div>
+    </section>
+
+    <section class="services-section py-16 bg-gray-100">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-bold mb-8">What We Offer</h2>
+            <div class="grid grid-cols-2 gap-8">
                 <div class="service">
-                    <h3>Service 1</h3>
+                    <h3 class="text-xl font-bold mb-2">Service 1</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
                 <div class="service">
-                    <h3>Service 2</h3>
+                    <h3 class="text-xl font-bold mb-2">Service 2</h3>
                     <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </div>
-            </div>
-            <div class="services-row">
                 <div class="service">
-                    <h3>Service 3</h3>
+                    <h3 class="text-xl font-bold mb-2">Service 3</h3>
                     <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                 </div>
                 <div class="service">
-                    <h3>Service 4</h3>
+                    <h3 class="text-xl font-bold mb-2">Service 4</h3>
                     <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+</main>
 
-     <div class="container">
-        <header class="header">
-            <h1 class="main-heading">Let's Help You Establish Caring and Professionalism In Your Health Services Today</h1>
-            <div class="contact-info">
-                
-                <div class="social-icons">
-				<h2 class="contact-heading">Address</h2>
-                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-dribbble"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                </div>
-                <div class="contact-details">
-                    <h2 class="contact-heading">Say Hello</h2>
-                    <p>info@example.com</p>
-                    <p>+1 (123) 456-7890</p>
-                    <p>+44 1234 567890</p>
-                </div>
+<div class="container">
+    <header class="header py-8">
+        <h1 class="main-heading text-2xl font-bold">Let's Help You Establish Caring and Professionalism In Your Health Services Today</h1>
+        <div class="contact-info flex justify-between items-center">
+            <div class="social-icons">
+                <h2 class="contact-heading text-lg font-bold mb-2">Address</h2>
+                <a href="#" class="social-icon text-gray-600 hover:text-blue-500"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon text-gray-600 hover:text-blue-500"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon text-gray-600 hover:text-blue-500"><i class="fab fa-dribbble"></i></a>
+                <a href="#" class="social-icon text-gray-600 hover:text-blue-500"><i class="fab fa-instagram"></i></a>
             </div>
-        </header>
-    </div>
+            <div class="contact-details">
+                <h2 class="contact-heading text-lg font-bold mb-2">Say Hello</h2>
+                <p>info@example.com</p>
+                <p>+1 (123) 456-7890</p>
+                <p>+44 1234 567890</p>
+            </div>
+        </div>
+    </header>
+</div>
 
-    <footer class="footer container">
-        <nav class="footer-nav">
-            <a href="#">Home</a>
-            <a href="#">About Us</a>
-            <a href="#">Our Services</a>
-            <a href="#">Education</a>
-            <a href="#">Membership</a>
-            <a href="#">More</a>
+<footer class="footer bg-gray-800 text-white py-8">
+    <div class="container mx-auto">
+        <nav class="footer-nav flex justify-center mb-4">
+            <a href="#" class="px-4 hover:text-blue-500">Home</a>
+            <a href="#" class="px-4 hover:text-blue-500">About Us</a>
+            <a href="#" class="px-4 hover:text-blue-500">Our Services</a>
+            <a href="#" class="px-4 hover:text-blue-500">Education</a>
+            <a href="#" class="px-4 hover:text-blue-500">Membership</a>
+            <a href="#" class="px-4 hover:text-blue-500">More</a>
         </nav>
-        <div class="copyright">
+        <div class="copyright text-center">
             SampleCompany ©2024. All Rights Reserved.
         </div>
-    </footer>
+    </div>
+</footer>
     <button class="scroll-top"><i class="fas fa-arrow-up"></i></button>
 	<script src="js/arrow.js"></script>
     <script>
