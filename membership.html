@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Packages</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #d1dbc4;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .header h1 {
+            color: #1a1a1a;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            color: #4b5563;
+            font-size: 1.1rem;
+        }
+
+        .pricing-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background-color: #ffffff;
+            border-radius: 1rem;
+            padding: 2rem;
+            width: 300px;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .best-value {
+            background-color: #1f2937;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .package-name {
+            color: #1f2937;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .currency {
+            color: #6b7280;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .price {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin: 1rem 0;
+        }
+
+        .description {
+            color: #6b7280;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+
+        .select-button {
+            background-color: #1f2937;
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .select-button:hover {
+            background-color: #374151;
+        }
+
+        @media (max-width: 768px) {
+            .pricing-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .pricing-card {
+                width: 100%;
+                max-width: 350px;
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>LET YOUR NATURAL BEAUTY SHINE</h1>
+        <p>Browse our packages and take your pick</p>
+    </div>
+
+    <div class="pricing-container">
+        <div class="pricing-card">
+            <div class="package-name">New Client Deal</div>
+            <div class="currency">TTD$</div>
+            <div class="price">150</div>
+            <div class="description">Great for trying our services</div>
+            <a href="#" class="select-button">Select</a>
+        </div>
+
+        <div class="pricing-card">
+            <div class="best-value">Best Value</div>
+            <div class="package-name">Platnuim Unlimited</div>
+            <div class="currency">TTD$</div>
+            <div class="price">500</div>
+            <div class="description">For salon regulars and enthuasits</div>
+            <a href="#" class="select-button">Select</a>
+        </div>
+
+        <div class="pricing-card">
+            <div class="package-name">Monthly Treatments</div>
+            <div class="currency">TTD$</div>
+            <div class="price">300</div>
+            <div class="description">Great for trying our services</div>
+            <a href="#" class="select-button">Select</a>
+        </div>
+    </div>
+</body>
+</html>
