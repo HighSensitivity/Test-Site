@@ -5,8 +5,8 @@
 }
 
 body {
-  height: 100vh;
-  place-items: center;
+  height: 110vh;
+ 
 
 }
 
@@ -63,25 +63,33 @@ main {
   & .title {
     font-family: 'arial-black';
     text-transform: uppercase;
+	color: #403576;
+	font-size: 2rem;
   }
 
   & .description {
     line-height: 1.7;
     margin: 1rem 0 1.5rem;
-    font-size: 0.8rem;
+    font-size: 1.1rem;
+	color: #ef5da2;
   }
 
   & button {
     width: fit-content;
     background-color: rgba(0,0,0,0.1);
-    color: white;
-    border: 2px solid white;
+    color: #403576;
+    border: 2px solid #403576;
     border-radius: 0.25rem;
     padding: 0.75rem;
     cursor: pointer;
   }
 }
 
+   button:hover {
+	background-color: #ef5da2;
+    color: white;
+    border-color: #ef5da2;
+}
 .item:nth-of-type(2) .content {
   display: block;
   animation: show 0.75s ease-in-out 0.3s forwards;
