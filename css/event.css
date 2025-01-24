@@ -5,9 +5,7 @@
 }
 
 body {
-  height: 110vh;
- 
-
+  height: 105vh;
 }
 
 main {
@@ -18,18 +16,19 @@ main {
 }
 
 .item {
-  width: 200px;
-  height: 300px;
+  width: 300px;
+  height: 200px;
   list-style-type: none;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  right: 4rem;
+  transform: translateX(0);
   z-index: 1;
   background-position: center;
   background-size: cover;
   border-radius: 20px;
   box-shadow: 0 20px 30px rgba(255,255,255,0.3) inset;
   transition: transform 0.1s, left 0.75s, top 0.75s, width 0.75s, height 0.75s;
+
 
   &:nth-child(1), &:nth-child(2) {
     left: 0;
@@ -42,10 +41,10 @@ main {
     opacity: 1;
   }
 
-  &:nth-child(3) { left: 50%; }
-  &:nth-child(4) { left: calc(50% + 220px); }
-  &:nth-child(5) { left: calc(50% + 440px); }
-  &:nth-child(6) { left: calc(50% + 660px); opacity: 0; }
+  &:nth-child(3) { top: 5%; }
+  &:nth-child(4) { top: calc(5% + 220px + 20px); }
+  &:nth-child(5) { top: calc(5% + 440px + 40px); }
+
 }
 
 .content {
@@ -63,15 +62,15 @@ main {
   & .title {
     font-family: 'arial-black';
     text-transform: uppercase;
-	color: #403576;
-	font-size: 2rem;
+    color: #403576;
+    font-size: 2rem;
   }
 
   & .description {
     line-height: 1.7;
     margin: 1rem 0 1.5rem;
     font-size: 1.1rem;
-	color: #ef5da2;
+    color: #ef5da2;
   }
 
   & button {
@@ -85,11 +84,12 @@ main {
   }
 }
 
-   button:hover {
-	background-color: #ef5da2;
+button:hover {
+    background-color: #ef5da2;
     color: white;
     border-color: #ef5da2;
 }
+
 .item:nth-of-type(2) .content {
   display: block;
   animation: show 0.75s ease-in-out 0.3s forwards;
@@ -113,6 +113,8 @@ main {
   transform: translateX(-50%);
   z-index: 5;
   user-select: none;
+  display: flex;
+  gap: 0.5rem;
 
   & .btn {
     background-color: rgba(255,255,255,0.5);
@@ -136,13 +138,13 @@ main {
     & button        { font-size: 0.7rem; }
   }
   .item {
-    width: 160px;
-    height: 270px;
+    width: 270px;
+    height: 160px;
 
-    &:nth-child(3) { left: 50%; }
-    &:nth-child(4) { left: calc(50% + 170px); }
-    &:nth-child(5) { left: calc(50% + 340px); }
-    &:nth-child(6) { left: calc(50% + 510px); opacity: 0; }
+    &:nth-child(3) { top: 10%; }
+    &:nth-child(4) { top: calc(10% + 170px + 20px); }
+    &:nth-child(5) { top: calc(10% + 340px + 40px); }
+    &:nth-child(6) { top: calc(10% + 510px + 60px); opacity: 0; }
   }
 }
 
@@ -153,12 +155,12 @@ main {
     & button        { font-size: 0.7rem; }
   }
   .item {
-    width: 130px;
-    height: 220px;
+    width: 220px;
+    height: 130px;
+    right: 3rem;
 
-    &:nth-child(3) { left: 50%; }
-    &:nth-child(4) { left: calc(50% + 140px); }
-    &:nth-child(5) { left: calc(50% + 280px); }
-    &:nth-child(6) { left: calc(50% + 420px); opacity: 0; }
+    &:nth-child(3) { top: 10%; }
+    &:nth-child(4) { top: calc(10% + 140px + 20px); }
+    &:nth-child(5) { top: calc(10% + 280px + 40px); }
   }
 }
