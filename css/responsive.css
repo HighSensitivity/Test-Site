@@ -1,0 +1,177 @@
+/* Common responsive styles */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .text-sm {
+        font-size: 12px;
+    }
+    
+    .hero-slider .slide-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-slider .slide-content p {
+        font-size: 0.9rem;
+    }
+    
+    .icon-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .content-section .container {
+        flex-direction: column;
+    }
+    
+    .image-half, .text-half {
+        width: 100%;
+        padding: 1rem;
+    }
+    
+    .pricing-card {
+        width: 100%;
+        margin: 1rem 0;
+    }
+    
+    .footer-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .icon-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .content-section .container {
+        flex-direction: column;
+    }
+    
+    .image-half, .text-half {
+        width: 100%;
+        padding: 1.5rem;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .icon-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .content-section .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .image-half, .text-half {
+        width: 50%;
+        padding: 2rem;
+    }
+}
+
+/* Common responsive navigation */
+@media only screen and (max-width: 768px) {
+    .flex.items-center.space-x-4 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .text-sm {
+        margin-bottom: 0.5rem;
+    }
+    
+    .social-icons {
+        margin-top: 1rem;
+    }
+    
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-link {
+        padding: 0.5rem 0;
+    }
+}
+
+/* Responsive form elements */
+@media only screen and (max-width: 768px) {
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    .form-group {
+        margin-bottom: 1rem;
+    }
+    
+    .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Responsive tables */
+@media only screen and (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+/* Responsive images */
+@media only screen and (max-width: 768px) {
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Utility classes for responsive design */
+.hide-on-mobile {
+    @media only screen and (max-width: 768px) {
+        display: none !important;
+    }
+}
+
+.show-on-mobile {
+    @media only screen and (min-width: 769px) {
+        display: none !important;
+    }
+}
+
+/* Responsive grid system */
+.grid {
+    display: grid;
+    gap: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (min-width: 993px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+} 

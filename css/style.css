@@ -1,0 +1,391 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Navbar start */
+.social-icon-1 {
+    margin-left: 15px;
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+.text-sm-1 {
+    margin-right: 20px;
+    font-size: 14px;
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Maintain the link's default color */
+
+}
+.text-sm:hover {
+    color: #046cb5;
+}
+.social-icon-1:hover {
+    transform: scale(1.3);
+}
+.social-icon-1 {
+    transition: color 0.3s ease;
+    color: #fff;
+}
+body .social-icon-1.facebook-icon:hover i {
+    color: #1877F2 !important; /* Facebook blue */
+}
+
+body .social-icon-1.instagram-icon:hover i {
+    color: #E4405F !important; /* Instagram pink */
+}
+
+body .social-icon-1.twitter-icon:hover i {
+    color: #1DA1F2 !important; /* Twitter blue */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+/* Navbar end */
+
+/* Slide start */
+.hero-slider {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide-content {
+    max-width: 80%;
+}
+
+.slide-text-1 {
+    animation: slideInRight 1s ease-out;
+}
+
+.slide-text-2 {
+    animation: slideInLeft 1s ease-out 0.5s;
+    animation-fill-mode: both;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-animation.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #fff;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.slider-arrow-left {
+    left: 10px;
+}
+
+.slider-arrow-right {
+    right: 10px;
+}
+/* Slide end */
+
+/* Content Start */
+.content-section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+.image-half, .text-half {
+    flex: 1;
+    padding: 1rem;
+}
+
+.image-half img {
+    max-width: 100%;
+    height: auto;
+}
+   .content-section, .services-section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+.image-half, .text-half {
+    flex: 1;
+    padding: 1rem;
+}
+
+.image-half img {
+    max-width: 100%;
+    height: auto;
+}
+
+button{
+    border-radius: 1rem;
+    color: #000000;
+    padding: 10px;
+    cursor: pointer;
+}
+/* Content end */
+
+/* Services Start */
+.services-section {
+    flex-direction: column;
+    align-items: center;
+}
+
+.services-row {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.service {
+    flex: 0 1 calc(50% - 2rem);
+    margin: 0 1rem;
+    padding: 1rem;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.service h3 {
+    margin-bottom: 1rem;
+}
+/* Services end */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-top: 1px solid #2c2e32;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-nav a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+
+.copyright {
+    font-size: 14px;
+}
+
+.scroll-top {
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 0.5rem;
+    }
+
+    .hero-slider {
+        height: 40vh;
+    }
+
+    .slide {
+        font-size: 1.5rem;
+    }
+
+    .content-section {
+        flex-direction: column;
+    }
+
+    .image-half, .text-half {
+        flex: 1 0 100%;
+    }
+
+    .services-row {
+        flex-direction: column;
+    }
+
+    .service {
+        flex: 1 0 100%;
+        margin-bottom: 1rem;
+    }
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+}
+
+/* Buttom Header Start */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.main-heading {
+    font-size: 2.5em;
+    max-width: 600px;
+    margin-bottom: 40px;
+}
+.contact-info {
+    text-align: right;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 20px; /* Add some space between header and contact-info */
+}
+.header, .contact-info {
+    flex: 1;
+}
+.contact-details {
+    margin-top: 10px;
+}
+.contact-heading {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact-details p {
+    margin: 5px 0;
+}
+/* Buttom Header Start */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 1px solid #2c2e32;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-nav a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.copyright {
+    font-size: 14px;
+background-color: #1f2937;
+   color: #fff;
+}
+
+.active-link {
+    color: #3b82f6 !important; /* Blue-500 color */
+    font-weight: 600;
+}
