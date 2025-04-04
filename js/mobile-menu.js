@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     mobileMenu.style.transform = 'translateY(-10px)';
     mobileMenu.style.opacity = '0';
     mobileMenu.style.display = 'none';
-    mobileMenu.style.backgroundColor = '#1f2937'; // Set background color explicitly
+
 
     mobileMenuButton.addEventListener('click', () => {
         const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
             mobileMenu.offsetHeight;
             mobileMenu.style.transform = 'translateY(0)';
             mobileMenu.style.opacity = '1';
-            mobileMenu.style.backgroundColor = '#1f2937'; // Ensure background color is set when showing
         } else {
             mobileMenu.style.transform = 'translateY(-10px)';
             mobileMenu.style.opacity = '0';
