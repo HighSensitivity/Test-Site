@@ -63,7 +63,7 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) and (max-width: 992px) {
     .icon-container {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
     
     .content-section .container {
@@ -154,7 +154,7 @@
 
 /* Responsive grid system */
 .grid {
-    display: grid;
+    display: flex;
     gap: 1rem;
 }
 
@@ -172,6 +172,6 @@
 
 @media only screen and (min-width: 993px) {
     .grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 } 
